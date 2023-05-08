@@ -1,106 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Navbar from "./components/NavBar";
+import Houses from "./components/Houses";
 
 export default function App() {
-  let [houses, setHouses] = useState([]);
+  let [houseName, setHouseName] = useState("");
 
-  useEffect(() => {
-    fetch("")
-      .then((response) => response.json())
-      .then((data) => {
-        setHouses(data);
-      });
-  }, []);
-
-  function Navbar() {
-    return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <span className="navbar-toggler-icon">
-            <a className="nav-link" href="#">
-              Home
-            </a>
-          </span>
-          <span className="navbar-text mx-3">
-            <a className="nav-link" href="#">
-              Houses
-            </a>
-          </span>
-          <span className="navbar-text mx-3">
-            <a className="nav-link" href="#">
-              Spells
-            </a>
-          </span>
-          <span className="navbar-text mx-3">
-            <a className="nav-link" href="#">
-              Potions
-            </a>
-          </span>
-        </div>
-      </nav>
-    );
+  // I need a function called sorting hat that will randomly assign a house to the user when they click on the button
+  function sortingHat() {
+    let houses = ["Gryffindor", "Slytherin", "Hufflepuff", "Ravenclaw"];
+    let randomHouse = houses[Math.floor(Math.random() * houses.length)];
+    return randomHouse;
   }
 
   // I want to insert four images of the four houses here
   //when I click on the image, I want to display the house name, and description of the house
   //I want to display the house name and description in a card and there should be a buttton to click to take you to the page Houses.jsx
   //I need to import the Houses.jsx file
-
-  function Houses() {
-    return (
-      <div className="houses">
-        <div className="card">
-          <img
-            className="HouseImage" //I cannot resize the image in css
-            src="https://media.minalima.com/2019/02/option-1-gallery-02-gryffindor-house-crest-poster-scaled-1300x1300.jpg"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Gryffindor</h5>
-            <p className="card-text">
-              Gryffindor values courage, bravery, nerve, and chivalry.
-            </p>
-          </div>
-        </div>
-        <div className="card">
-          <img
-            className="HouseImage"
-            src="https://media.minalima.com/2019/03/option-1-gallery-02-slytherin-house-crest-poster-scaled-1300x1300.jpg"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Slytherin</h5>
-            <p className="card-text">
-              Slytherin values ambition, cunning, leadership, and
-              resourcefulness.
-            </p>
-          </div>
-        </div>
-        <div className="card">
-          <img
-            className="HouseImage"
-            src="https://media.minalima.com/2019/02/option-1-gallery-02-hufflepuff-house-crest-poster-scaled-1300x1300.jpg"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Hufflepuff</h5>
-            <p className="card-text">
-              Hufflepuff values hard work, patience, justice, and loyalty.
-            </p>
-          </div>
-        </div>
-        <div className="card">
-          <img
-            className="HouseImage"
-            src="https://media.minalima.com/2019/02/option-1-gallery-02-ravenclaw-house-crest-poster-scaled-1300x1300.jpg"
-          />
-          <div className="card-body">
-            <h5 className="card-title">Ravenclaw</h5>
-            <p className="card-text">
-              Ravenclaw values intelligence, creativity, learning, and wit.
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -141,6 +57,18 @@ export default function App() {
         </p>
       </div>
       <Houses />
+      //I want a button that will randomly assign a house to the user when they
+      click on the button and the result appears below the button in a card
+      according to the house they belong from the function Houses above //
+      <button
+        className="btn btn-primary"
+        onClick={() => {
+          setHouseName(sortingHat());
+        }}
+      >
+        Click here to find out which house you belong to!
+      </button>
+      {houseName}
     </div>
   );
 }
