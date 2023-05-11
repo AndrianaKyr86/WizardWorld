@@ -2,9 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/NavBar";
 import Houses from "./components/Houses";
+import hogwards from "./hogwards.js";
 
 export default function App() {
   let [houseName, setHouseName] = useState("");
+
+  //filter the hogward and for every item should match the house name and save it.
+  //To show it on ie a card/featured create the card and use the filteredArray[0] to show the info
+  let filteredArray = hogwards.filter((i) => i.name === houseName);
+  console.log(filteredArray);
 
   // I need a function called sorting hat that will randomly assign a house to the user when they click on the button
   function sortingHat() {
@@ -69,6 +75,28 @@ export default function App() {
         Click here to find out which house you belong to!
       </button>
       {houseName}
+      {/* //Now that I have the house name and the filteredArray[0] I want to display the house name and the description of the house in a card// */}
+      <div className="card" style={{ width: "18rem" }}>
+        {/* <img /> //I want to insert the image of the house here according to the
+        filteredArray[0]// */}
+        <div className="card-body">
+          <h5 className="card-title">{houseName}</h5>
+          <p className="card-text">{filteredArray[0].name}</p>
+          <p className="card-text">{filteredArray[0].description}</p>
+          <p className="card-text">{filteredArray[0].founder}</p>
+          <p className="card-text">{filteredArray[0].commonRoom}</p>
+          <p className="card-text">{filteredArray[0].password}</p>
+          <p className="card-text">{filteredArray[0].mascot}</p>
+          <p className="card-text">{filteredArray[0].headOfHouse}</p>
+          <p className="card-text">{filteredArray[0].houseGhost}</p>
+          <p className="card-text">{filteredArray[0].colors}</p>
+          <p className="card-text">{filteredArray[0].element}</p>
+          <p className="card-text">{filteredArray[0].traits}</p>
+        </div>
+        {/* //I want to display a card with the house name and use the
+      filteredArray[0] to show the info only once the button is clicked and the
+      sorting hat function is run// */}
+      </div>
     </div>
   );
 }

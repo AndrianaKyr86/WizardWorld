@@ -6,7 +6,7 @@
 //GET characters / students
 //https://orange-equinox-201454.postman.co/workspace/0034e3b0-0f99-4a6e-8e10-5ede864bce70/request/26941194-0391a5c8-48d5-4f4a-9d26-2ebe6795ffcd
 
-let hogwarts = [
+let hogwards = [
   {
     name: "Gryffindor",
     description:
@@ -72,3 +72,5 @@ let hogwarts = [
     image: "",
   },
 ];
+
+export default hogwards;
