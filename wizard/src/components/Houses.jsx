@@ -1,5 +1,6 @@
 //This is the component that displays the houses of Hogwarts on landing page
 //and it is connected on the App.jsx file
+import "./Houses.css";
 
 export default function Houses() {
   return (

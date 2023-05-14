@@ -1,0 +1,33 @@
+.HouseImage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  width: 30%;
+  height: 30%;
+  border: 20px solid black;
+  border-radius: 60px;
+  flex: 50%;
+}
+.HouseImage img {
+  margin: 8px;
+  padding: 0 4px;
+}
+
+.houses {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-title {
+  color: black;
+  text-align: rtl;
+}
+
+.card-text {
+  color: black;
+}

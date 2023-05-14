@@ -1,12 +1,22 @@
 .navbar {
-  background-color: #a76d60;
+  background-color: #3e9035;
   color: black;
   padding: 0.5em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
 }
+
 .nav-links {
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 50%;
 }

@@ -90,47 +90,39 @@ export default function App() {
           {/* In addition to the house name, I want to display the house description */}
           {/* but first I need to save it to a variable otherwise it reads undefined */}
           <br />
-          House: {filteredArray[0] && filteredArray[0].name}
+          <div className="title"> House:</div>{" "}
+          {filteredArray[0] && filteredArray[0].name} <br />
+          <div className="subtitle"> Description:</div>{" "}
+          {filteredArray[0] && filteredArray[0].description}
           <br />
-          Description: {filteredArray[0] && filteredArray[0].description}
+          <div className="subtitle">Founder: </div>
+          {filteredArray[0] && filteredArray[0].founder}
           <br />
-          Founder:{filteredArray[0] && filteredArray[0].founder}
+          <div className="subtitle">Common Room:</div>{" "}
+          {filteredArray[0] && filteredArray[0].commonRoom}
           <br />
-          Common Room: {filteredArray[0] && filteredArray[0].commonRoom}
+          <div className="subtitle">Password: </div>
+          {filteredArray[0] && filteredArray[0].password}
           <br />
-          Password: {filteredArray[0] && filteredArray[0].password}
+          <div className="subtitle">Mascot:</div>{" "}
+          {filteredArray[0] && filteredArray[0].mascot}
           <br />
-          Mascot: {filteredArray[0] && filteredArray[0].mascot}
+          <div className="subtitle">Head of House:</div>{" "}
+          {filteredArray[0] && filteredArray[0].headOfHouse}
           <br />
-          Head of House: {filteredArray[0] && filteredArray[0].headOfHouse}
+          <div className="subtitle">Ghost:</div>{" "}
+          {filteredArray[0] && filteredArray[0].houseGhost}
           <br />
-          Ghost: {filteredArray[0] && filteredArray[0].houseGhost}
+          <div className="subtitle">Colors:</div>{" "}
+          {filteredArray[0] && filteredArray[0].colors}
           <br />
-          Colors: {filteredArray[0] && filteredArray[0].colors}
+          <div className="subtitle">Element:</div>{" "}
+          {filteredArray[0] && filteredArray[0].element}
           <br />
-          Element: {filteredArray[0] && filteredArray[0].element}
-          <br />
-          Traits: {filteredArray[0] && filteredArray[0].traits}
+          <div className="subtitle">Traits:</div>{" "}
+          {filteredArray[0] && filteredArray[0].traits}
         </Popup>
-        {/* //Now that I have the house name and the filteredArray[0] I want to display the 
-      house name and the description of the house in a card// */}
-        {/* <div className="card" style={{ width: "18rem" }}> */}
-        {/* <img /> //I want to insert the image of the house here according to the
-        filteredArray[0]// */}
-        {/* <div className="card-body">
-            <h5 className="card-title">{houseName}</h5>
-            <p className="card-text">{filteredArray[0].name}</p>
-            <p className="card-text">{filteredArray[0].description}</p>
-            <p className="card-text">{filteredArray[0].founder}</p>
-            <p className="card-text">{filteredArray[0].commonRoom}</p>
-            <p className="card-text">{filteredArray[0].password}</p>
-            <p className="card-text">{filteredArray[0].mascot}</p>
-            <p className="card-text">{filteredArray[0].headOfHouse}</p>
-            <p className="card-text">{filteredArray[0].houseGhost}</p>
-            <p className="card-text">{filteredArray[0].colors}</p>
-            <p className="card-text">{filteredArray[0].element}</p>
-            <p className="card-text">{filteredArray[0].traits}</p>
-          </div> */}
+
         {/* //I want to display a card with the house name and use the
       filteredArray[0] to show the info only once the button is clicked and the
       sorting hat function is run// */}
