@@ -1,0 +1,12 @@
+.navbar {
+  background-color: #a76d60;
+  color: black;
+  padding: 0.5em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+}
