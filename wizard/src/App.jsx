@@ -5,8 +5,6 @@ import Houses from "./components/Houses";
 import hogwards from "./hogwards.js";
 import Popup from "./components/Popup";
 
-// import { useState } from "react";
-
 export default function App() {
   let [buttonPopup, setButtonPopup] = useState(false);
 
