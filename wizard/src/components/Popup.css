@@ -4,7 +4,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #e1bbc9;
+  background-color: #c38b8b;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +20,8 @@
   padding: 32px;
   width: 100%;
   max-width: 640px;
-  background-color: #c874d9;
+  background-color: #c38b8b;
+  text-align: center;
 }
 
 .popup.inner.close-btn {

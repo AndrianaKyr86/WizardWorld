@@ -3,8 +3,8 @@ import "./Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="collapse navbar-collapse" id="navbarNav">
+    <nav className="navbar">
+      <div className="container-fluid">
         <span className="navbar-toggler-icon">
           <a className="nav-link" href="#">
             Home

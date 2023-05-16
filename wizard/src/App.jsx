@@ -31,6 +31,8 @@ export default function App() {
     <div>
       <main>
         <Navbar />
+        <br />
+        <br />
         <div className="paragraph">
           <p>
             Welcome to Wizard World, the ultimate destination for aspiring
@@ -67,14 +69,24 @@ export default function App() {
             So come along and explore the wonders of Wizard World! You never
             know what amazing discoveries and adventures lie ahead.
           </p>
+          <br />
+          <br />
         </div>
+        <br />
+        <br />
+        <br />
+
         <Houses />
         {/* //I want a button that will randomly assign a house to the user when
         they click on the button and the result appears below the button in a
         card according to the house they belong from the function Houses above
         // */}
+        <br />
+        <br />
+
         <button
-          className="btn btn-primary"
+          class="button-85"
+          role="button"
           onClick={() => {
             setHouseName(sortingHat());
             setButtonPopup(true);
@@ -82,43 +94,49 @@ export default function App() {
         >
           Click here to find out which house you belong to!
         </button>
-        {houseName}
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           {houseName}
           {/* In addition to the house name, I want to display the house description */}
           {/* but first I need to save it to a variable otherwise it reads undefined */}
+          <br />
           <br />
           <div className="title"> House:</div>{" "}
           {filteredArray[0] && filteredArray[0].name} <br />
           <div className="subtitle"> Description:</div>{" "}
           {filteredArray[0] && filteredArray[0].description}
           <br />
-          <div className="subtitle">Founder: </div>
-          {filteredArray[0] && filteredArray[0].founder}
-          <br />
-          <div className="subtitle">Common Room:</div>{" "}
-          {filteredArray[0] && filteredArray[0].commonRoom}
-          <br />
-          <div className="subtitle">Password: </div>
-          {filteredArray[0] && filteredArray[0].password}
-          <br />
-          <div className="subtitle">Mascot:</div>{" "}
-          {filteredArray[0] && filteredArray[0].mascot}
-          <br />
-          <div className="subtitle">Head of House:</div>{" "}
-          {filteredArray[0] && filteredArray[0].headOfHouse}
-          <br />
-          <div className="subtitle">Ghost:</div>{" "}
-          {filteredArray[0] && filteredArray[0].houseGhost}
-          <br />
-          <div className="subtitle">Colors:</div>{" "}
-          {filteredArray[0] && filteredArray[0].colors}
-          <br />
-          <div className="subtitle">Element:</div>{" "}
-          {filteredArray[0] && filteredArray[0].element}
-          <br />
-          <div className="subtitle">Traits:</div>{" "}
-          {filteredArray[0] && filteredArray[0].traits}
+          <div className="column-container">
+            <div className="column">
+              <div className="subtitle">Founder: </div>
+              {filteredArray[0] && filteredArray[0].founder}
+              <br />
+              <div className="subtitle">Common Room:</div>{" "}
+              {filteredArray[0] && filteredArray[0].commonRoom}
+              <br />
+              <div className="subtitle">Password: </div>
+              {filteredArray[0] && filteredArray[0].password}
+              <br />
+              <div className="subtitle">Mascot:</div>{" "}
+              {filteredArray[0] && filteredArray[0].mascot}
+              <br />
+            </div>
+            <div className="column">
+              <div className="subtitle">Head of House:</div>{" "}
+              {filteredArray[0] && filteredArray[0].headOfHouse}
+              <br />
+              <div className="subtitle">Ghost:</div>{" "}
+              {filteredArray[0] && filteredArray[0].houseGhost}
+              <br />
+              <div className="subtitle">Colors:</div>{" "}
+              {filteredArray[0] && filteredArray[0].colors}
+              <br />
+              <div className="subtitle">Element:</div>{" "}
+              {filteredArray[0] && filteredArray[0].element}
+              <br />
+              <div className="subtitle">Traits:</div>{" "}
+              {filteredArray[0] && filteredArray[0].traits}
+            </div>
+          </div>
         </Popup>
 
         {/* //I want to display a card with the house name and use the
