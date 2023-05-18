@@ -4,7 +4,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #c38b8b;
+  background: #8a2387;
+  background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+  position: relative;
+  text-align: left;
   opacity: 1;
   display: flex;
   justify-content: center;
@@ -15,17 +18,93 @@
   overflow: auto;
 }
 
-.popup.inner {
+.popup_inner {
   position: relative;
   padding: 32px;
   width: 100%;
   max-width: 640px;
-  background-color: #c38b8b;
-  text-align: center;
+  background: #8a2387;
+  background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+  position: relative;
+  text-align: left;
 }
 
-.popup.inner.close-btn {
+/* testing */
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+.popup_inner.close {
+  /* position: absolute; I want the position of the button to be on the center  */
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 20px;
+  right: 20px;
+
+  button {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    color: transparent;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    left: 50%;
+    letter-spacing: 1.5px;
+    line-height: 90px;
+    outline: none;
+    overflow: hidden;
+    padding: 10px 0 0;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in;
+    width: 90px;
+  }
+
+  button::before,
+  button::after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transform-origin: center left;
+    transition: all 0.2s ease-in;
+    width: 141.4214px;
+    z-index: -1;
+  }
+
+  button::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  button::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+
+  button:hover {
+    color: #8a2387;
+  }
+
+  button:hover::before,
+  button:hover::after {
+    height: 50px;
+    transform: rotate(0deg);
+  }
+}
+
+/* testing */
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+
+inner.body {
+  background: #8a2387;
+  background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+  position: relative;
+  text-align: center;
 }

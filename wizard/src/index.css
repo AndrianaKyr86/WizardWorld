@@ -1,10 +1,3 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Fira Sans", sans-serif;
-} */
-
 main {
   padding: 32px;
   display: flex;
@@ -14,26 +7,27 @@ main {
   min-height: 100vh;
 }
 
-/* Testing */
+/* 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
-body {
+/* body {
   background-color: #e3e3e3;
-}
-
+  /* background: url(http://getwallpapers.com/wallpaper/full/3/e/8/455428.jpg); 
+} */
+/* 
 .main-header {
   width: 100%;
   height: 100vh;
   background: url(http://getwallpapers.com/wallpaper/full/3/e/8/455428.jpg)
     center center / cover no-repeat;
   position: relative;
-}
+} */
 
-.main-hipster-triangle {
+/* .main-hipster-triangle {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -43,17 +37,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
-.hipster-triangle {
+/* .hipster-triangle {
   position: absolute;
   transform: rotate(180deg) translateX(20px);
-}
-
+} */
+/* 
 .triangle,
 .circle,
 .line {
   fill: transparent;
   stroke: white;
   stroke-width: 9;
-}
+}  */

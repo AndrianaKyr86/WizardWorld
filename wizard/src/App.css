@@ -1,5 +1,10 @@
 body {
-  background-color: #463832;
+  background-color: #000;
+  background: url(http://getwallpapers.com/wallpaper/full/3/e/8/455428.jpg);
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
 }
 
 p {
@@ -135,4 +140,90 @@ p {
   border: 2px solid black;
   border-radius: 10px;
   margin: 10px;
+}
+
+@font-face {
+  font-family: "Harry Potter";
+  src: url("https://cdn2.hubspot.net/hubfs/678613/Projects/Harry%20Potter%20Battle%20Game/ParryHotter.ttf")
+    format("truetype");
+}
+h1 {
+  color: #fff;
+  font-family: "Harry Potter";
+  font-size: 40px;
+  text-align: center;
+}
+.sorting-hat {
+  position: absolute;
+  top: 260%;
+  left: 20%;
+  width: 400px;
+  height: auto;
+  margin-top: 250px;
+  margin-left: 250px;
+  text-align: center;
+}
+
+.sorting-hat img {
+  height: auto;
+  width: 100%;
+}
+
+.sorting-hat p {
+  color: #fff;
+  text-align: center;
+}
+
+.background {
+  /* width: 100%; */
+  height: 100vh;
+  background: url(http://getwallpapers.com/wallpaper/full/3/e/8/455428.jpg)
+    no-repeat center center;
+  /* position: relative; */
+  background-size: cover;
+}
+
+/* Testing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: #e3e3e3;
+  background: url(http://getwallpapers.com/wallpaper/full/3/e/8/455428.jpg); 
+} */
+
+.main-header {
+  width: 100%;
+  height: 100vh;
+  /* background: url(http://getwallpapers.com/wallpaper/full/3/e/8/455428.jpg)
+    center center / cover no-repeat; */
+  position: relative;
+}
+
+.main-hipster-triangle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hipster-triangle {
+  position: absolute;
+  transform: rotate(180deg) translateX(20px);
+}
+
+.triangle,
+.circle,
+.line {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 9;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Popup.css";
+import EndLine from "./EndLine";
 
 function Popup(props) {
   return props.trigger ? (
@@ -7,7 +8,7 @@ function Popup(props) {
       <div className="popup_inner">
         {props.children}
         <br />
-        <button className="close-btn" onClick={() => props.setTrigger(false)}>
+        <button className="close" onClick={() => props.setTrigger(false)}>
           Close
         </button>
       </div>
@@ -15,5 +16,6 @@ function Popup(props) {
   ) : (
     ""
   );
+  <EndLine />;
 }
 export default Popup;

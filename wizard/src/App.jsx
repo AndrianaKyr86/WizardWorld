@@ -4,6 +4,7 @@ import Navbar from "./components/NavBar";
 import Houses from "./components/Houses";
 import hogwards from "./hogwards.js";
 import Popup from "./components/Popup";
+import EndLine from "./components/EndLine";
 
 export default function App() {
   let [buttonPopup, setButtonPopup] = useState(false);
@@ -28,11 +29,27 @@ export default function App() {
   //I need to import the Houses.jsx file
 
   return (
-    <div>
+    <div className="background">
       <main>
-        <Navbar />
+        {/* <!-- Testing --> */}
+        <header className="main-header">
+          <div className="main-hipster-triangle">
+            <div className="hipster-triangle">
+              <svg height="370" width="370">
+                <line x1="180" y1="10" x2="185" y2="350" className="line" />
+                <polygon points="10,10 350,10 185,350" className="triangle" />
+                <circle cx="182" cy="115" r="105" className="circle" />
+              </svg>
+            </div>
+          </div>
+          <Navbar />
+        </header>
+        {/* <!-- testing --> */}
+
         <br />
         <br />
+        {/* I want to add here a backround image */}
+
         <div className="paragraph">
           <p>
             Welcome to Wizard World, the ultimate destination for aspiring
@@ -75,7 +92,6 @@ export default function App() {
         <br />
         <br />
         <br />
-
         <Houses />
         {/* //I want a button that will randomly assign a house to the user when
         they click on the button and the result appears below the button in a
@@ -83,17 +99,31 @@ export default function App() {
         // */}
         <br />
         <br />
+        {/* testing */}
+        <section className="sorting-hat">
+          <h1>Hogwards sorting hat</h1>
+          <img
+            id="hat"
+            src="https://cdn2.hubspot.net/hubfs/678613/Projects/CodePen/Harry%20Potter%20Sorting%20Hat/Sorting%20Hat.png"
+            alt="Sorting Hat"
+          ></img>
+          <p id="message"></p>
+          <button
+            class="button-85"
+            role="button"
+            onClick={() => {
+              setHouseName(sortingHat());
+              setButtonPopup(true);
+            }}
+            id="sortbutton"
+          >
+            Click to Get Sorted Into Your House
+          </button>
+          <p id="message"></p>
+        </section>
 
-        <button
-          class="button-85"
-          role="button"
-          onClick={() => {
-            setHouseName(sortingHat());
-            setButtonPopup(true);
-          }}
-        >
-          Click here to find out which house you belong to!
-        </button>
+        {/* testing */}
+
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           {houseName}
           {/* In addition to the house name, I want to display the house description */}
@@ -139,10 +169,7 @@ export default function App() {
           </div>
         </Popup>
 
-        {/* //I want to display a card with the house name and use the
-      filteredArray[0] to show the info only once the button is clicked and the
-      sorting hat function is run// */}
-        {/* </div> */}
+        <EndLine />
       </main>
     </div>
   );
