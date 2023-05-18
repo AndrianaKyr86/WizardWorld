@@ -4,7 +4,7 @@ import Navbar from "./components/NavBar";
 import Houses from "./components/Houses";
 import hogwards from "./hogwards.js";
 import Popup from "./components/Popup";
-import EndLine from "./components/EndLine";
+// import EndLine from "./components/EndLine";
 
 export default function App() {
   let [buttonPopup, setButtonPopup] = useState(false);
@@ -29,9 +29,10 @@ export default function App() {
   //I need to import the Houses.jsx file
 
   return (
+    // I want to add background image here thus the div className="background" that is handled in CSS
     <div className="background">
       <main>
-        {/* <!-- Testing --> */}
+        {/* <!-- Testing Placed my heading here instead of index.html as it works better--> */}
         <header className="main-header">
           <div className="main-hipster-triangle">
             <div className="hipster-triangle">
@@ -48,7 +49,6 @@ export default function App() {
 
         <br />
         <br />
-        {/* I want to add here a backround image */}
 
         <div className="paragraph">
           <p>
@@ -97,6 +97,7 @@ export default function App() {
         they click on the button and the result appears below the button in a
         card according to the house they belong from the function Houses above
         // */}
+        <br />
         <br />
         <br />
         {/* testing */}
@@ -169,7 +170,7 @@ export default function App() {
           </div>
         </Popup>
 
-        <EndLine />
+        {/* <EndLine /> */}
       </main>
     </div>
   );

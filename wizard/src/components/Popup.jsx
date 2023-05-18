@@ -16,6 +16,8 @@ function Popup(props) {
   ) : (
     ""
   );
+  <br />;
+  <br />;
   <EndLine />;
 }
 export default Popup;
